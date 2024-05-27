@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kill the Alien</title>
+    <link rel="shortcut icon" href="/img/favicon-32x32.png" type="image/x-icon">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 10px; /* Reducido el padding */
+            z-index: 2;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px; /* Reducido el tamaño de la fuente */
+        }
+        h1 {
+            margin: 0 auto;
+            font-size: 24px; /* Tamaño de la fuente del título */
+        }
+        main {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .header-text {
+            flex: 1;
+            padding: 0; /* Ajustado el padding a cero */
+        }
+        .header-text:last-child {
+            margin-left: 2px; /* Separación del segundo .header-text */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-text"><h2>Kill the Alien</h2></div>
+        <img src="img/Game_Logo.png" alt="Logo del videojuego" width="100" style="position: absolute; top: 10px; right: 800px;">
+        
+        <div class="header-text">
+            <p>Instrucciones:</p>
+                <li>1. Dispara a los aliens haciendo clic sobre ellos. </li>
+                <li>2. Evita que los aliens alcancen la parte superior de la pantalla.</li>
+                <li>3. ¡Supera todos los niveles que puedas!</li>
+        </div>
+    </header>
+    <main>
+        <video autoplay muted loop class="video-background">
+            <source src="img/Background.mp4" type="video/mp4">
+            Tu navegador no soporta el video HTML5.
+        </video>
+        <canvas id="canvas"></canvas>
+    </main>
+    <footer>
+        <p>Créditos: Haziel Edrei Gomez Alvarez  -21200603-</p>
+        <p>Este videojuego es con fines de entretenimiento, únicamente como una práctica para impulsar el conocimiento y desarrollo del mismo.</p>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
