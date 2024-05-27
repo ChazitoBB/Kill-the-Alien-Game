@@ -210,7 +210,7 @@ function crearAlien() {
         let randomRadius = Math.floor(Math.random() * 60 + 40);
         let randomX = Math.random() * (window_width - 2 * randomRadius) + randomRadius;
         let randomY = window_height + randomRadius; // Aparecen desde abajo
-        let randomSpeed = 1 + (nivel * 1); // Velocidad inicial 1, aumenta 0.1 por nivel
+        let randomSpeed = 1 + (nivel * .7); // Velocidad inicial 1, aumenta 0.1 por nivel
 
         let VerificacionCreacion = true;
         // Verifica si el nuevo alien está demasiado cerca de los aliens existentes
